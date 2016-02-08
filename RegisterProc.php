@@ -1,8 +1,8 @@
 <?php
    $bug = true;
    session_start();
-   include("../includeMe.php");
-   include("../openDB.php");
+   include("includeMe.php");
+   include("openDB.php");
    openDB();
 ?>
 
