@@ -49,8 +49,8 @@ $phoneNumber  = @$_POST[phoneNumber]; // phone number
          $row = mysql_fetch_row($result);
          $userID = $row[0] + 1; // might want to check that this is not 1
          
-         $querydel = "DELETE FROM Register WHERE email='$em';";
-         mysql_query($querydel);
+      //   $querydel = "DELETE FROM Register WHERE email='$em';";
+      //   mysql_query($querydel);
          
          $now = time(); // this is a timestamp for right now
          $nowstring = date("Y-m-d", $now );
