@@ -59,7 +59,7 @@ $phoneNumber  = @$_POST[phoneNumber]; // phone number
       }
    }
 
-     header('Location: home.html'); exit;
+     header('Location: http://mcbitlab.com/thebookclub/home.html'); exit;
 ?>
 
 </body>
