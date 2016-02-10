@@ -4,20 +4,7 @@
    include("includeMe.php");
    include("openDB.php");
    openDB();
-?>
 
-<html>
-<head>
-<title> Registration Processsing </title>
-</head>
-<body>
-<h2>Registration Processing </h2>
-
-<?php
-
-/* RegisterProc.php
-
-*/
 date_default_timezone_set("America/New_York");
    
 $em  = @$_POST[email]; // raw email address, may have bad stuff
@@ -27,20 +14,10 @@ $na = @$_POST[name];
 $name = addslashes( $na );  // making sure name is okay 
 $phoneNumber  = @$_POST[phoneNumber]; // phone number 
 
-
-    doRegister( $email, $password, $name, $phoneNumber); 
-
-
-   // register with email, password, name, and phhone number
-   // Note: password, name, and email may need slashing
-   function doRegister( $em, $password, $name, $phoneNumber)
-   {
       
-      // find max customerID and add one to get new one
-      $query = "SELECT MAX(userID) from User";
-      $result = mysql_query( $query );
-      if ( noerror( $result ) )
-      {
+         // find max customerID and add one to get new one
+         $query = "SELECT MAX(userID) from User";
+
          $row = mysql_fetch_row($result);
          $userID = $row[0] + 1; // might want to check that this is not 1
          
@@ -54,13 +31,10 @@ $phoneNumber  = @$_POST[phoneNumber]; // phone number
          ."    ,userID='$userID' "
          ." ;";
          $result=mysql_query($query);
-         noerror($result);
-        
-      }
-   }
+         if ($result==0) { noerror($result); }
+ 
 
      header('Location: http://mcbitlab.com/thebookclub/home.html'); exit;
 ?>
 
-</body>
-</html>
+
