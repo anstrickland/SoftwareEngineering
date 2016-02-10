@@ -1,11 +1,10 @@
 <?php
 
-/* logger2CheckPW.php
+/* LoginCheck.php
    This page is sent the email address and password, to be checked
    for logging this person in.  They are in POST: email4log, password4log.
    They have been checked for length but not funny stuff.
-   If you log in correctly, you will go to logger6In that says you are
-   logged in.  Ultimately, this should have a session variable that
+   Ultimately, this should have a session variable that
    remembers what you were doing and send you back there.
    IF you don't log in, $stat will contain a message why not and be printed.
 */
