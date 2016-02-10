@@ -34,7 +34,7 @@ $phoneNumber  = @$_POST[phoneNumber]; // phone number
          if ($result==0) { noerror($result); }
  
 
-     header('Location: http://mcbitlab.com/thebookclub/home.html'); exit;
+     header('Location: http://mcbitlab.com/thebookclub/begin.html'); exit;
 ?>
 
 
