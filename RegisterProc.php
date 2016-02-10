@@ -67,6 +67,7 @@ $phoneNumber  = @$_POST[phoneNumber]; // phone number
       }
    }
 
+header('Location: home.html');
 ?>
 
 </body>
