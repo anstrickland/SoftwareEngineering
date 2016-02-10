@@ -17,9 +17,8 @@
       </tr>
       <tr>
          <td>ISBN</td>
-         <input type="text" name="isbn" required>
+         <td><input type="text" name="isbn" required></td>
       </tr>
-	  <table>
       <tr>
          <td>Price</td>
          <td> <input type="text" name="price" required></td>
