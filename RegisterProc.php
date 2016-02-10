@@ -1,5 +1,5 @@
 <?php
-   $bug = true;
+  // $bug = true;
    session_start();
    include("includeMe.php");
    include("openDB.php");
