@@ -16,12 +16,7 @@
 <?php
 
 /* RegisterProc.php
-   This page is sent in POST the email4Reg, firstname4reg, lastname4reg,
-   password4reg, password4reg2, regnum.   
-   They have been checked for length but not funny stuff.
-   We make sure the passwords match and that this email is new.
-   Then record a temporary Customer record in the database and 
-   then send them email for them to ping back with the number.
+
 */
 date_default_timezone_set("America/New_York");
    
@@ -49,9 +44,6 @@ $phoneNumber  = @$_POST[phoneNumber]; // phone number
          $row = mysql_fetch_row($result);
          $userID = $row[0] + 1; // might want to check that this is not 1
          
-      //   $querydel = "DELETE FROM Register WHERE email='$em';";
-      //   mysql_query($querydel);
-         
          $now = time(); // this is a timestamp for right now
          $nowstring = date("Y-m-d", $now );
          $query= "INSERT INTO User SET" 
@@ -67,7 +59,7 @@ $phoneNumber  = @$_POST[phoneNumber]; // phone number
       }
    }
 
-header('Location: home.html');
+     header('Location: home.html'); exit;
 ?>
 
 </body>
