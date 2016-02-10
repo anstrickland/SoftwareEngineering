@@ -16,7 +16,7 @@
          <td> <input type="text" name="edition"> </td>
       </tr>
       <tr>
-         <td>ISBN</td
+         <td>ISBN</td>
          <input type="text" name="isbn" required>
       </tr>
 	  <table>
