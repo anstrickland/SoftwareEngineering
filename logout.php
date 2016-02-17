@@ -13,5 +13,5 @@ This page logs the user out.
 </html>
 
 <?php
-header("Location: http://mcbitlab.com/thebookclub/home.html"); 
+header("Location: home.html"); 
 ?>
