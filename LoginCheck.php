@@ -1,13 +1,4 @@
 <?php
-
-/* LoginCheck.php
-   This page is sent the email address and password, to be checked
-   for logging this person in.  They are in POST: email4log, password4log.
-   They have been checked for length but not funny stuff.
-   Ultimately, this should have a session variable that
-   remembers what you were doing and send you back there.
-   IF you don't log in, $stat will contain a message why not and be printed.
-*/
    $bug = false;
 
    session_start();
@@ -24,14 +15,9 @@ $pwas = addSlashes( $password );
 
 if($em!="" && $em==$email && $password!="" && $password==$pwas ) // no funny stuff
 {
-   // the user is trying to log in, so check db for name and password.
-   // We used to check for confirmed=0, because registrants and users were
-   // in the same table, but now we have a separate table.  Customer table
-   // is now ONLY confirmed.
    $query="SELECT * FROM User WHERE email='$em'"
        ." AND password='$password'"
        ." ;";
-   // echo "query=".$query."<br />";
    $result=mysql_query($query);
 
    if($result==0)
