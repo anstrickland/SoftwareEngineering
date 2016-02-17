@@ -1,5 +1,3 @@
-
-
 <?php
  include("includeMe.php");
  include("openDB.php"); //in the same folder
