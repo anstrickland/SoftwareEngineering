@@ -16,7 +16,7 @@ $query="insert into Product(productID, title, author, edition, ISBN) values('$pr
   $result=mysql_query($query);
   if ($result==0) { noerror( $result ); }
    
-$query="insert into Product(userID, productID, price, whenPosted) values('$userID','$productID', '$price', '$whenPosted')";
+$query="insert into Sales(userID, productID, price, whenPosted) values('$userID','$productID', '$price', '$whenPosted')";
   $result=mysql_query($query);
   if ($result==0) { noerror( $result ); }   
    
