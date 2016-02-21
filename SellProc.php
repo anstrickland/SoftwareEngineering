@@ -13,11 +13,12 @@
         $productID = $row[0] + 1;
    
 $query="insert into Product(productID, title, author, edition, ISBN) values('$productID','$title', '$author', '$edition', '$ISBN')";
-
-
-
   $result=mysql_query($query);
   if ($result==0) { noerror( $result ); }
+   
+$query="insert into Product(userID, productID, price, whenPosted) values('$userID','$productID', '$price', '$whenPosted')";
+  $result=mysql_query($query);
+  if ($result==0) { noerror( $result ); }   
    
  header("Location: http://mcbitlab.com/thebookclub/sellMatch.php");	exit;
 ?>
