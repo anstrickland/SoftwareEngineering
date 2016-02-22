@@ -38,5 +38,3 @@ $phoneNumber  = @$_POST[phoneNumber]; // phone number
 
      header('Location: http://mcbitlab.com/thebookclub/start.html'); exit;
 ?>
-
-
