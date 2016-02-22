@@ -40,7 +40,7 @@ $phoneNumber  = @$_POST[phoneNumber]; // phone number
  	function getMaxOrderId()
   {	
 	$maxid= 0;
-	$query= "SELECT MAX(userId) from User;";
+	$query= "SELECT MAX(userID) from User;";
 	$result = mysql_query($query);
 	if(noerror($result))
 	{
