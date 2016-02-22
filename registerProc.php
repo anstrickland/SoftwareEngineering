@@ -20,7 +20,7 @@ $phoneNumber  = @$_POST[phoneNumber]; // phone number
          
          $row = mysql_fetch_row($result);
         
-          $userID = $row[0] + 1; // might want to check that this is not 1
+         $userID = $row[0] + 1; // might want to check that this is not 1
         
 
          $now = time(); // this is a timestamp for right now
