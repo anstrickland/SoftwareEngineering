@@ -16,13 +16,7 @@ $na = @$_POST[name];
 $name = addslashes( $na );  // making sure name is okay 
 $phoneNumber  = @$_POST[phoneNumber]; // phone number 
 
-      
-         // find max customerID and add one to get new one
-    //     $query = "SELECT MAX(userID) from User";
-         
-      //   $row = mysql_fetch_row($result);
-        
-        // $userID = $row[0] + 1; // might want to check that this is not 1
+
         
          $now = time(); // this is a timestamp for right now
          $nowstring = date("Y-m-d", $now );
