@@ -19,10 +19,9 @@ $phoneNumber  = @$_POST[phoneNumber]; // phone number
          $query = "SELECT MAX(userID) from User;
          
          $row = mysql_fetch_row($result);
-         for($i=0; $i<$row; $i++)
-         {
+        
           $userID = $row[0] + 1; // might want to check that this is not 1
-         }
+        
 
          $now = time(); // this is a timestamp for right now
          $nowstring = date("Y-m-d", $now );
