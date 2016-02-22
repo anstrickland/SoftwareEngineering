@@ -1,7 +1,7 @@
 <html>
 <body>
 <center>
-  <form action="SellProc.php" method="POST"><script></script>
+  <form action="sellProc.php" method="POST"><script></script>
   <table>
         <tr>
          <td>Title</td>
