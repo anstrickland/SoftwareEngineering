@@ -16,7 +16,7 @@ $phoneNumber  = @$_POST[phoneNumber]; // phone number
 
       
          // find max customerID and add one to get new one
-         $query = "SELECT MAX(userID) from User;
+         $query = "SELECT MAX(userID) from User";
          
          $row = mysql_fetch_row($result);
         
