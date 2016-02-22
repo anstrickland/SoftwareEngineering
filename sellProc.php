@@ -11,18 +11,29 @@
 	$ISBN = addslashes($_POST['ISBN']);
 	
    
-$query="insert into Product(productID, title, author, edition, ISBN) values('$newId','$title', '$author', '$edition', '$ISBN')";
+$query="INSERT INTO Product SET"
+."      productID='"($newId)"'" 
+."      ,title='"($title)"'" 
+."      ,author='"($author)"'"
+."      ,edition='"($edition)"'" 
+."      ,ISBN='"($ISBN)"'" 
+." ;";
   $result=mysql_query($query);
   if ($result==0) { noerror( $result ); }
-   
-$query="insert into Sales(userID, productID, price, whenPosted) values('$userID','$newId', '$price', '$whenPosted')";
+ 
+ $query="INSERT INTO Sales SET"
+."      userID='"($userID)"'" 
+."      ,productID='"($newId)"'" 
+."      ,price='"($price)"'"
+."      ,whenPosted='"($whenPosted)"'" 
+." ;";
   $result=mysql_query($query);
-  if ($result==0) { noerror( $result ); }   
-   
-   
+  if ($result==0) { noerror( $result ); }
+
+  	$maxid= 0;
+ 
    	function getMaxOrderId()
   {	
-	$maxid= 0;
 	$query= "SELECT MAX(productID) from Product;";
 	$result = mysql_query($query);
 	if(noerror($result))
