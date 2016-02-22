@@ -24,7 +24,20 @@ $phoneNumber  = @$_POST[phoneNumber]; // phone number
         
         // $userID = $row[0] + 1; // might want to check that this is not 1
         
-	function getMaxOrderId()
+         $now = time(); // this is a timestamp for right now
+         $nowstring = date("Y-m-d", $now );
+         $query= "INSERT INTO User SET" 
+         ."     name='".addslashes($name)."' "
+         ."    ,email='".addslashes($email)."' "
+         ."    ,phoneNumber='$phoneNumber' "
+         ."    ,password='".addslashes($password)."' "
+         ."    ,userID='$newId' "
+         ." ;";
+         $result=mysql_query($query);
+         if ($result==0) { noerror($result); }
+ 
+ 
+ 	function getMaxOrderId()
   {	
 	$maxid= 0;
 	$query= "SELECT MAX(userId) from User;";
@@ -38,18 +51,6 @@ $phoneNumber  = @$_POST[phoneNumber]; // phone number
 	return $maxid;
 		
 
-         $now = time(); // this is a timestamp for right now
-         $nowstring = date("Y-m-d", $now );
-         $query= "INSERT INTO User SET" 
-         ."     name='".addslashes($name)."' "
-         ."    ,email='".addslashes($email)."' "
-         ."    ,phoneNumber='$phoneNumber' "
-         ."    ,password='".addslashes($password)."' "
-         ."    ,userID='$newId' "
-         ." ;";
-         $result=mysql_query($query);
-         if ($result==0) { noerror($result); }
- 
 
      header('Location: http://mcbitlab.com/thebookclub/start.html'); exit;
 ?>
