@@ -7,6 +7,8 @@
 
 date_default_timezone_set("America/New_York");
    
+      $newId= getMaxOrderId() +1;
+	  
 $em  = @$_POST[email]; // raw email address, may have bad stuff
 $email = addslashes( $em );  // making sure email is okay 
 $password  = @$_POST[password];  // password 
@@ -16,12 +18,25 @@ $phoneNumber  = @$_POST[phoneNumber]; // phone number
 
       
          // find max customerID and add one to get new one
-         $query = "SELECT MAX(userID) from User";
+    //     $query = "SELECT MAX(userID) from User";
          
-         $row = mysql_fetch_row($result);
+      //   $row = mysql_fetch_row($result);
         
-         $userID = $row[0] + 1; // might want to check that this is not 1
+        // $userID = $row[0] + 1; // might want to check that this is not 1
         
+	function getMaxOrderId()
+  {	
+	$maxid= 0;
+	$query= "SELECT MAX(userId) from User;";
+	$result = mysql_query($query);
+	if(noerror($result))
+	{
+		$row = mysql_fetch_row($result);
+		$maxid= $row[0];
+	}		
+	
+	return $maxid;
+		
 
          $now = time(); // this is a timestamp for right now
          $nowstring = date("Y-m-d", $now );
@@ -30,7 +45,7 @@ $phoneNumber  = @$_POST[phoneNumber]; // phone number
          ."    ,email='".addslashes($email)."' "
          ."    ,phoneNumber='$phoneNumber' "
          ."    ,password='".addslashes($password)."' "
-         ."    ,userID='$userID' "
+         ."    ,userID='$newId' "
          ." ;";
          $result=mysql_query($query);
          if ($result==0) { noerror($result); }
