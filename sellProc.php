@@ -20,7 +20,7 @@ $query="INSERT INTO Product SET"
 ." ;";
   $result=mysql_query($query);
   if ($result==0) { noerror( $result ); }
- 
+ /*
  $query="INSERT INTO Sales SET"
 ."      userID='"($userID)"'" 
 ."      ,productID='"($newId)"'" 
@@ -28,6 +28,7 @@ $query="INSERT INTO Product SET"
 ."      ,whenPosted='"($whenPosted)"'" 
 ." ;";
   $result=mysql_query($query);
+  */
   if ($result==0) { noerror( $result ); }
 
   	$maxid= 0;
