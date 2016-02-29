@@ -3,7 +3,9 @@
   include("openDB.php");
   openDB();
 
-      $newId= getMaxOrderId() +1;
+      //$newId= getMaxOrderId() +1;
+	$newID= "SELECT MAX(productID) FROM Product";
+	++$newID;
 
 	$title = addslashes($_POST['title']);
 	$author = addslashes($_POST['author']);
@@ -12,7 +14,7 @@
 	
    
 $query="INSERT INTO Product SET"
-."      productID='($newId)'" 
+."      productID='($newID)'" 
 ."      ,title='($title)'" 
 ."      ,author='($author)'"
 ."      ,edition='($edition)'" 
