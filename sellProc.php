@@ -3,9 +3,9 @@
   include("openDB.php");
   openDB();
 
-      //$newId= getMaxOrderId() +1;
-	$newID= "SELECT MAX(productID) FROM Product";
-	++$newID;
+      $newId= getMaxOrderId();
+	//$newID= "SELECT MAX(productID) FROM Product";
+	//++$newID;
 
 	$title = addslashes($_POST['title']);
 	$author = addslashes($_POST['author']);
@@ -33,7 +33,7 @@ $query="INSERT INTO Product SET"
   */
   if ($result==0) { noerror( $result ); }
 
-  	$maxid= 0;
+  	//$maxid= 0;
  
    	function getMaxOrderId()
   {	
