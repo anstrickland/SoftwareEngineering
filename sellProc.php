@@ -48,5 +48,5 @@ $query="INSERT INTO Product SET"
 	return $maxid;
   }	
    
- header('Location: http://mcbitlab.com/thebookclub/sellMatch.php'); exit;
+ //header('Location: http://mcbitlab.com/thebookclub/sellMatch.php'); exit;
 ?>
