@@ -4,8 +4,6 @@
   openDB();
 
       $newId= getMaxOrderId();
-	//$newID= "SELECT MAX(productID) FROM Product";
-	//++$newID;
 
 	$title = addslashes($_POST['title']);
 	$author = addslashes($_POST['author']);
@@ -31,12 +29,13 @@ $query="INSERT INTO Product SET"
 ." ;";
   $result=mysql_query($query);
   */
-  if ($result==0) { noerror( $result ); }
 
-  	//$maxid= 0;
+   if ($result==0) { noerror( $result ); }
  
    	function getMaxOrderId()
   {	
+  	  	
+  	$maxid= 0;
 	$query= "SELECT MAX(productID) from Product;";
 	$result = mysql_query($query);
 	if(noerror($result))
