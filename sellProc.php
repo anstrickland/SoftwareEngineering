@@ -15,8 +15,9 @@ $query="INSERT INTO Product SET"
 ."      ,edition=$edition" 
 ."      ,ISBN=$ISBN" 
 ." ;";
- /*
+ 
   $result=mysql_query($query);
+  /*
   if ($result==0) { noerror( $result ); }
  $query="INSERT INTO Sales SET"
 ."      userID='"($userID)"'" 
