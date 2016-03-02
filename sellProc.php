@@ -6,17 +6,17 @@
 	$title = addslashes($_POST['title']);
 	$author = addslashes($_POST['author']);
 	$edition = addslashes($_POST['edition']);
-	//$ISBN = addslashes($_POST['ISBN']);
+	$isbn = addslashes($_POST['isbn']);
 	
-	$ibsn_raw = @$_POST[isbn];	//the isbn number, unsecured
-	$isbn_slash = addslashes($isbn_raw);	//safely feature for isbn field
+	//$ibsn_raw = @$_POST[isbn];	//the isbn number, unsecured
+	//$isbn_slash = addslashes($isbn_raw);	//safely feature for isbn field
 	
    
 $query="INSERT INTO Product SET"
 ."      title='$title'" 
 ."      ,author='$author'"
 ."      ,edition='$edition'" 
-."      ,isbn'".addslashes($isbn_raw)."'" 
+."      ,isbn'$isbn'" 
 ." ;";
  
   $result=mysql_query($query);
