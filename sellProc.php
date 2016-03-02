@@ -10,10 +10,10 @@
 	
    
 $query="INSERT INTO Product SET"
-."      title=$title" 
-."      ,author=$author"
-."      ,edition=$edition" 
-."      ,ISBN=$ISBN" 
+."      title='$title'" 
+."      ,author='$author'"
+."      ,edition='$edition'" 
+."      ,ISBN='$ISBN'" 
 ." ;";
  
   $result=mysql_query($query);
