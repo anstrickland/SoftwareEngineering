@@ -18,7 +18,9 @@
 	//placing the isbn number in the order table
 	//also places the date in the table (not sure if works)
 	$query = "INSERT INTO Order SET"
-	. "ISBN='". addslashes($isbn_slash)."' "
+	. " ISBN=' $isbn_slash' "
+	." whenOrderPlaced = 'order_placed' "
+	." userId = 'userID' "
 	." ;";
 	$result = mysql_query($query);
 	if ($result == 0) { noerror($result);}
