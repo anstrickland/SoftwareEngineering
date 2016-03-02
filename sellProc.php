@@ -31,5 +31,5 @@ $query="INSERT INTO Product SET"
    if ($result==0) { noerror( $result ); }
  
    
- header('Location: http://mcbitlab.com/thebookclub/sellMatch.php'); exit;
+ //header('Location: http://mcbitlab.com/thebookclub/sellMatch.php'); exit;
 ?>
