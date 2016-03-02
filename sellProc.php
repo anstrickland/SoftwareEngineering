@@ -12,13 +12,13 @@
    
 $query="INSERT INTO Product SET"
 ."      title='".addslashes($title)."'" 
-."      ,author='($author)'"
-."      ,edition='($edition)'" 
-."      ,ISBN='($ISBN)'" 
+."      ,author='".addslashes($author)."'"
+."      ,edition='".addslashes($edition)."'" 
+."      ,ISBN='".addslashes($ISBN)."'" 
 ." ;";
+ /*
   $result=mysql_query($query);
   if ($result==0) { noerror( $result ); }
- /*
  $query="INSERT INTO Sales SET"
 ."      userID='"($userID)"'" 
 ."      ,productID='"($newId)"'" 
