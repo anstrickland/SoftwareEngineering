@@ -2,11 +2,7 @@
   include("includeMe.php");
   include("openDB.php");
   openDB();
-
-      $newId= getMaxOrderId();
-	//$newID= "SELECT MAX(productID) FROM Product";
-	//++$newID;
-
+  
 	$title = addslashes($_POST['title']);
 	$author = addslashes($_POST['author']);
 	$edition = addslashes($_POST['edition']);
@@ -14,15 +10,15 @@
 	
    
 $query="INSERT INTO Product SET"
-."      productID='($newId)'" 
-."      ,title='($title)'" 
-."      ,author='($author)'"
-."      ,edition='($edition)'" 
-."      ,ISBN='($ISBN)'" 
+."      title='$title'" 
+."      ,author='$author'"
+."      ,edition='$edition'" 
+."      ,ISBN='".addslashes($ISBN)."'" 
 ." ;";
+ 
   $result=mysql_query($query);
+  /*
   if ($result==0) { noerror( $result ); }
- /*
  $query="INSERT INTO Sales SET"
 ."      userID='"($userID)"'" 
 ."      ,productID='"($newId)"'" 
@@ -31,22 +27,9 @@ $query="INSERT INTO Product SET"
 ." ;";
   $result=mysql_query($query);
   */
-  if ($result==0) { noerror( $result ); }
 
-  	//$maxid= 0;
+   if ($result==0) { noerror( $result ); }
  
-   	function getMaxOrderId()
-  {	
-	$query= "SELECT MAX(productID) from Product;";
-	$result = mysql_query($query);
-	if(noerror($result))
-	{
-		$row = mysql_fetch_row($result);
-		$maxid= $row[0];
-	}		
-	
-	return $maxid;
-  }	
    
  //header('Location: http://mcbitlab.com/thebookclub/sellMatch.php'); exit;
 ?>
