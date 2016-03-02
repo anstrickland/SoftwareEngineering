@@ -18,6 +18,9 @@ $query="INSERT INTO Product SET"
   $result=mysql_query($query);
  
  	$price = addslashes($_POST['price']);
+ 	$userID=;
+ 	$productID=;
+ 	$whenPosted=;
 
   if ($result==0) { noerror( $result ); }
  $query="INSERT INTO Sales SET"
