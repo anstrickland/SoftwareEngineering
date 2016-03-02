@@ -13,8 +13,8 @@
 $query="INSERT INTO Product SET"
 ."      title='".addslashes($title)."'" 
 ."      ,author='".addslashes($author)."'"
-."      ,edition='".addslashes($edition)."'" 
-."      ,ISBN='".addslashes($ISBN)."'" 
+."      ,edition='($edition)'" 
+."      ,ISBN='($ISBN)'" 
 ." ;";
  /*
   $result=mysql_query($query);
