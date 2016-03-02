@@ -3,7 +3,7 @@
   include("openDB.php");
   openDB();
 
-      $newId= getMaxOrderId();
+      $newId= getMaxOrderId()+1;
 
 	$title = addslashes($_POST['title']);
 	$author = addslashes($_POST['author']);
