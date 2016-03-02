@@ -3,7 +3,7 @@
   include("openDB.php");
   openDB();
 
-
+	$newId;
 	$title = addslashes($_POST['title']);
 	$author = addslashes($_POST['author']);
 	$edition = addslashes($_POST['edition']);
