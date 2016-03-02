@@ -3,7 +3,6 @@
   include("openDB.php");
   openDB();
 
-      $newId= getMaxOrderId()+1;
 
 	$title = addslashes($_POST['title']);
 	$author = addslashes($_POST['author']);
@@ -12,7 +11,6 @@
 	
    
 $query="INSERT INTO Product SET"
-//."      productID='"($newId)'" 
 ."      title='($title)'" 
 ."      ,author='($author)'"
 ."      ,edition='($edition)'" 
@@ -32,20 +30,6 @@ $query="INSERT INTO Product SET"
 
    if ($result==0) { noerror( $result ); }
  
-   	function getMaxOrderId()
-  {	
-  	  	
-  	$maxid= 0;
-	$query= "SELECT MAX(productID) from Product;";
-	$result = mysql_query($query);
-	if(noerror($result))
-	{
-		$row = mysql_fetch_row($result);
-		$maxid= $row[0];
-	}		
-	
-	return $maxid;
-  }	
    
- //header('Location: http://mcbitlab.com/thebookclub/sellMatch.php'); exit;
+ header('Location: http://mcbitlab.com/thebookclub/sellMatch.php'); exit;
 ?>
