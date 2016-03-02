@@ -2,8 +2,7 @@
   include("includeMe.php");
   include("openDB.php");
   openDB();
-
-	$newId;
+  
 	$title = addslashes($_POST['title']);
 	$author = addslashes($_POST['author']);
 	$edition = addslashes($_POST['edition']);
@@ -11,11 +10,10 @@
 	
    
 $query="INSERT INTO Product SET"
-."	 productID='($newId)'" 
-."      ,title='($title)'" 
-."      ,author='($author)'"
-."      ,edition='($edition)'" 
-."      ,ISBN='($ISBN)'" 
+."      title=$title" 
+."      ,author=$author"
+."      ,edition=$edition" 
+."      ,ISBN=$ISBN" 
 ." ;";
  /*
   $result=mysql_query($query);
