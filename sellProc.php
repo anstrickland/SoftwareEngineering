@@ -11,7 +11,8 @@
 	
    
 $query="INSERT INTO Product SET"
-."       title='($title)'" 
+."	 productID='"($newId)'" 
+."      ,title='($title)'" 
 ."      ,author='($author)'"
 ."      ,edition='($edition)'" 
 ."      ,ISBN='($ISBN)'" 
