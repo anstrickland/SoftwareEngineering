@@ -16,7 +16,7 @@ $query="INSERT INTO Product SET"
 ."      title='$title'" 
 ."      ,author='$author'"
 ."      ,edition='$edition'" 
-."      ,ISBN='".addslashes($isbn_raw)."'" 
+."      ,isbn'".addslashes($isbn_raw)."'" 
 ." ;";
  
   $result=mysql_query($query);
