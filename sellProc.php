@@ -8,10 +8,6 @@
 	$edition = addslashes($_POST['edition']);
 	$isbn = addslashes($_POST['isbn']);
 	
-	//$ibsn_raw = @$_POST[isbn];	//the isbn number, unsecured
-	//$isbn_slash = addslashes($isbn_raw);	//safely feature for isbn field
-	
-   
 $query="INSERT INTO Product SET"
 ."      title='$title'" 
 ."      ,author='$author'"
@@ -20,16 +16,21 @@ $query="INSERT INTO Product SET"
 ." ;";
  
   $result=mysql_query($query);
-  /*
+ 
+ 	$price = addslashes($_POST['price']);
+ 	$userID=;
+ 	$productID=;
+ 	$whenPosted=;
+
   if ($result==0) { noerror( $result ); }
  $query="INSERT INTO Sales SET"
-."      userID='"($userID)"'" 
-."      ,productID='"($newId)"'" 
-."      ,price='"($price)"'"
-."      ,whenPosted='"($whenPosted)"'" 
+."       userID='$userID'" 
+."      ,productID='$productID'" 
+."      ,price='$price'"
+."      ,whenPosted='$whenPosted'" 
 ." ;";
   $result=mysql_query($query);
-  */
+  
 
    if ($result==0) { noerror( $result ); }
  
