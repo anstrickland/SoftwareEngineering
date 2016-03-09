@@ -19,9 +19,9 @@ $query="INSERT INTO Product SET"
  
  	$price = addslashes($_POST['price']);
  	$userID= "SELECT userID FROM User";
- 	echo "userID";
+ 	echo userID;
  	$productID="SELECT productID FROM Product";
- 	$whenPosted=CURDATE();
+ 	$whenPosted="SELECT CURDATE()";
 
   if ($result==0) { noerror( $result ); }
  $query="INSERT INTO Sales SET"
