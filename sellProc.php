@@ -18,9 +18,9 @@ $query="INSERT INTO Product SET"
   $result=mysql_query($query);
  
  	$price = addslashes($_POST['price']);
- 	$userID=;
- 	$productID=;
- 	$whenPosted=;
+ 	$userID= "SELECT userID FROM User";
+ 	$productID="SELECT productID FROM Product";
+ 	$whenPosted=CURDATE();
 
   if ($result==0) { noerror( $result ); }
  $query="INSERT INTO Sales SET"
@@ -36,4 +36,4 @@ $query="INSERT INTO Product SET"
  
    
  //header('Location: http://mcbitlab.com/thebookclub/sellMatch.php'); exit;
-?>
+ ?>
