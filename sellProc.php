@@ -19,7 +19,7 @@ $query="INSERT INTO Product SET"
  
  	$price = addslashes($_POST['price']);
  	$userID= "SELECT userID FROM User";
- 	echo userID;
+ 	echo $userID;
  	$productID="SELECT productID FROM Product";
  	$whenPosted="SELECT CURDATE()";
 
