@@ -21,13 +21,24 @@ $query="INSERT INTO Product SET"
  	$userID= "SELECT userID FROM User";
  	echo $userID;
  	$productID="SELECT productID FROM Product";
- 	$whenPosted="SELECT CURDATE()";
-
+ 	$now = time();		//the current time
+ 	$whenPosted= date("m-d-y", $now);
+ 
+   if ($result==0) { noerror( $result ); }
+ $query="INSERT INTO Sales userID"
+."       userID='$userID'" 
+." ;";
+  $result=mysql_query($query);
+ 
+ if ($result==0) { noerror( $result ); }
+ $query="INSERT INTO Sales productID"
+."       productID='$productID'" 
+." ;";
+  $result=mysql_query($query);
+ 	
   if ($result==0) { noerror( $result ); }
  $query="INSERT INTO Sales SET"
-."       userID='$userID'" 
-."      ,productID='$productID'" 
-."      ,price='$price'"
+."       price='$price'"
 ."      ,whenPosted='$whenPosted'" 
 ." ;";
   $result=mysql_query($query);
