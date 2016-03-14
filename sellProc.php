@@ -19,7 +19,6 @@ $query="INSERT INTO Product SET"
  
  	$price = addslashes($_POST['price']);
  	$userID= "SELECT userID FROM User";
- 	echo $userID;
  	$productID="SELECT productID FROM Product";
  	$now = time();		//the current time
  	$whenPosted= date("m-d-y", $now);
