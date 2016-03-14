@@ -21,7 +21,7 @@ $query="INSERT INTO Product SET"
  	$_SESSION['email']=$email;
  	$price = addslashes($_POST['price']);
  	$userID= "SELECT userID FROM User WHERE email = $email";
- 	$productID="SELECT productID FROM Product";
+ 	$productID="SELECT productID FROM Product ";
  	$now = time();		//the current time
  	$whenPosted= date("m-d-y", $now);
  
@@ -29,8 +29,8 @@ $query="INSERT INTO Product SET"
   if ($result==0) { noerror( $result ); }
  $query="INSERT INTO Sales SET"
  ."       userID='$userID'" 
- ."       productID='$productID'"
-."       price='$price'"
+ ."      ,productID='$productID'"
+."       ,price='$price'"
 ."      ,whenPosted='$whenPosted'" 
 ." ;";
   $result=mysql_query($query);
