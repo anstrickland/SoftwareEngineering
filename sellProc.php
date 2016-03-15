@@ -21,17 +21,18 @@ $query="INSERT INTO Product SET"
  	$emailAddress= $_SESSION['email'];
  	$price = addslashes($_POST['price']);
  	$userID= "SELECT userID FROM User WHERE phoneNumber ='1112223333'";
- 	echo $userID;
+ 	$userID2=mysql_query($userID);
  	//$userID= "SELECT userID FROM User WHERE email = '$emailAddress';";
  	$productID="SELECT productID FROM Product WHERE ISBN= '$isbn';";
+ 	$productID2=mysql_query($productID);
  	$now = time();		//the current time
  	$whenPosted= date("m-d-y", $now);
  
  	
   if ($result==0) { noerror( $result ); }
  $query="INSERT INTO Sales SET"
- ."       userID='$userID'" 
- ."      ,productID='$productID'"
+ ."       userID='$userID2'" 
+ ."      ,productID='$productID2'"
 ."       ,price='$price'"
 ."      ,whenPosted='$whenPosted'" 
 ." ;";
