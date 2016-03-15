@@ -20,8 +20,8 @@ $query="INSERT INTO Product SET"
  
  	$_SESSION['email']=$email;
  	$price = addslashes($_POST['price']);
- 	$userID= "SELECT userID FROM User WHERE email = $email";
- 	$productID="SELECT productID FROM Product WHERE ISBN= $isbn";
+ 	$userID= "SELECT userID FROM User WHERE email = $[email]";
+ 	$productID="SELECT productID FROM Product WHERE ISBN= $[isbn]";
  	$now = time();		//the current time
  	$whenPosted= date("m-d-y", $now);
  
