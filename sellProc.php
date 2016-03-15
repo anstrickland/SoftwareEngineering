@@ -20,7 +20,7 @@ $query="INSERT INTO Product SET"
  
  	$emailAddress= $_SESSION['email'];
  	$price = addslashes($_POST['price']);
- 	$userID= "SELECT userID FROM User WHERE phoneNumber ="1112223333"";
+ 	$userID= "SELECT userID FROM User WHERE phoneNumber ='1112223333'";
  	//$userID= "SELECT userID FROM User WHERE email = '$emailAddress';";
  	$productID="SELECT productID FROM Product WHERE ISBN= '$isbn';";
  	$now = time();		//the current time
