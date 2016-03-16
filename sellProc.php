@@ -21,7 +21,7 @@ if ($result==0) { noerror( $result ); }
 
  	//$emailAddress= $_SESSION['email'];
  	$price = addslashes($_POST['price']);
- 	$userID="SELECT userID FROM User WHERE email = '$_SESSION['email']';";
+ 	$userID="SELECT userID FROM User WHERE email = '$_SESSION['email']';
  	$userID2=mysql_query($userID);
  	echo userID2;
  	$productID="SELECT productID FROM Product WHERE Product.ISBN= '$isbn';";
