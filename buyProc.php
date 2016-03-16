@@ -19,12 +19,13 @@
 	//also places the date in the table (not sure if works)
 	$query = "INSERT INTO Order SET"
 		."ISBN= '$isbn'" 
-		.",whenOrderPlaced = '$order_placed'";";
+		.",whenOrderPlaced = '$order_placed';";
 	
 	$result = mysql_query($query);
 	if ($result == 0) { noerror($result);}
 	
 	//need function to generate userID
+
 	/*function getMaxOrderId()
 	{
 		$maxid = 0;
@@ -39,4 +40,5 @@
 		return $maxid;
 	}*/
 	 //header('Location: http://mcbitlab.com/thebookclub/start.html'); exit;
+	
 ?>
