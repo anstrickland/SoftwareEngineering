@@ -19,9 +19,9 @@ $result=mysql_query($query);
 if ($result==0) { noerror( $result ); }
 
 
- 	$emailAddress= $_SESSION['email'];
+ 	//$emailAddress= $_SESSION['email'];
  	$price = addslashes($_POST['price']);
- 	$userID= "SELECT userID FROM User WHERE User.email = '$emailAddress';";
+ 	$userID= "SELECT userID FROM User WHERE userID = '$_SESSION['userID'];";
  	$userID2=mysql_query($userID);
  	echo userID2;
  	$productID="SELECT productID FROM Product WHERE Product.ISBN= '$isbn';";
