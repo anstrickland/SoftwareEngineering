@@ -15,23 +15,20 @@ $query="INSERT INTO Product SET"
 ."      ,edition='$edition'" 
 ."      ,isbn='$isbn'" 
 ." ;";
- 
-  $result=mysql_query($query);
+$result=mysql_query($query);
+if ($result==0) { noerror( $result ); }
+
 
  	$emailAddress= $_SESSION['email'];
  	$price = addslashes($_POST['price']);
- 	$userID= "SELECT userID FROM User WHERE phoneNumber ='1112223333'";
+ 	$userID= "SELECT userID FROM User WHERE email = '$emailAddress';";
  	$userID2=mysql_query($userID);
- 	 if ($userID2==0) { noerror( $userID2 ); }
- 	//$userID= "SELECT userID FROM User WHERE email = '$emailAddress';";
  	$productID="SELECT productID FROM Product WHERE ISBN= '$isbn';";
  	$productID2=mysql_query($productID);
- 	 if ($productID2==0) { noerror( $productID2 ); }
+ 	 //if ($productID2==0) { noerror( $productID2 ); }
  	$now = time();		//the current time
- 	$whenPosted= date("m-d-y", $now);
+ 	$whenPosted= date("Y-m-d", $now);
  
- if ($result==0) { noerror( $result ); }
-
  
  $query="INSERT INTO Sales SET"
  ."       userID='$userID2'" 
@@ -40,9 +37,7 @@ $query="INSERT INTO Product SET"
 ."      ,whenPosted='$whenPosted'" 
 ." ;";
   $result=mysql_query($query);
-  
-
-   if ($result==0) { noerror( $result ); }
+  if ($result==0) { noerror( $result ); }
  
    
  //header('Location: http://mcbitlab.com/thebookclub/sellMatch.php'); exit;
