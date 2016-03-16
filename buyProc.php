@@ -40,6 +40,6 @@
 		
 		return $maxid;
 	}*/
-	 //header('Location: http://mcbitlab.com/thebookclub/start.html'); exit;
+	 header('Location: http://mcbitlab.com/thebookclub/buyMatch.php'); exit;
 	
 ?>
