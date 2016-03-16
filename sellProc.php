@@ -27,10 +27,10 @@ if ($result==0) { noerror( $result ); }
  	
  	if(noerror($productID2))
  	{
- 	   $row = mysql_fetch_row($productID2);
+ 	   $obj = mysql_fetch_object($productID2);
  	}
  	
- 	echo $row;
+ 	echo $obj;
  	$price = addslashes($_POST['price']);
  	//echo mysql_fetch_row($productID2);
  	$now = time();		//the current time
