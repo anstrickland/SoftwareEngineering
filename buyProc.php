@@ -17,7 +17,7 @@
 	
 	//placing the isbn number in the order table
 	//also places the date in the table (not sure if works)
-	$query = "INSERT INTO Order SET"
+	$query = "INSERT INTO BookOrder SET"
 	."        ISBN= '$isbn'" 
 	."        ,whenOrderPlaced = '$orderPlaced'"
 	.";";
