@@ -40,7 +40,7 @@ if($em!="" && $em==$email && $password!="" && $password==$pwas ) // no funny stu
       //echo "login successful"; 
       $stat = "login successful";
       $_SESSION['loginok']="yes";
-      $_SESSION['first']=$row['first'];
+      $_SESSION['email']=$row['email'];
       $_SESSION['userID']=$row['userID'];
        
       if (!$bug) { header('Location: http://mcbitlab.com/thebookclub/start.html'); exit; }
