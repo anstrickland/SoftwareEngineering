@@ -19,14 +19,15 @@ $result=mysql_query($query);
 if ($result==0) { noerror( $result ); }
 
 
- 	$emailAddress= addslashes($_SESSION['email']);
+ 	//$emailAddress= addslashes($_SESSION['email']);
  	$price = addslashes($_POST['price']);
- 	$userID="SELECT userID FROM User WHERE email = '$emailAddress'";
- 	$userID2=mysql_query($userID);
- 	echo mysql_fetch_row($userID2);
- 	$productID="SELECT productID FROM Product WHERE Product.ISBN= '$isbn';";
- 	$productID2=mysql_query($productID);
- 	echo mysql_fetch_row($productID2);
+ 	//$userID="SELECT userID FROM User WHERE email = '$emailAddress'";
+ 	$userID=($_SESSION['userID']);
+ 	//$userID2=mysql_query($userID);
+ 	echo mysql_fetch_row($userID);
+ 	//$productID="SELECT productID FROM Product WHERE Product.ISBN= '$isbn';";
+ 	//$productID2=mysql_query($productID);
+ 	//echo mysql_fetch_row($productID2);
  	$now = time();		//the current time
  	$whenPosted= date("Y-m-d", $now);
  
