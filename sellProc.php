@@ -23,7 +23,7 @@ if ($result==0) { noerror( $result ); }
  	$price = addslashes($_POST['price']);
  	//$userID="SELECT userID FROM User WHERE email = '$emailAddress'";
  	$userID=($_SESSION['userID']);
- 	//$userID2=mysql_query($userID);
+ 	$userID2=mysql_query($userID);
  	//echo mysql_fetch_row($userID);
  	//$productID="SELECT productID FROM Product WHERE Product.ISBN= '$isbn';";
  	//$productID2=mysql_query($productID);
