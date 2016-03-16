@@ -23,6 +23,8 @@ if ($result==0) { noerror( $result ); }
  	$userID=($_SESSION['userID']);
  	echo $userID;
  	$productID="SELECT productID FROM Product WHERE Product.ISBN= '$isbn';";
+ 	echo $productID;
+ 	$price = addslashes($_POST['price']);
  	//$productID2=mysql_query($productID);
  	//echo mysql_fetch_row($productID2);
  	$now = time();		//the current time
