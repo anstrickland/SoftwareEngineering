@@ -24,7 +24,13 @@ if ($result==0) { noerror( $result ); }
  	echo $userID;
  	$productID="SELECT productID FROM Product WHERE Product.ISBN= '$isbn';";
  	$productID2=mysql_query($productID);
- 	echo $productID2;
+ 	
+ 	if(noerror($productID2))
+ 	{
+ 	   $row = mysql_fetch_row($productID2);
+ 	}
+ 	
+ 	echo $row;
  	$price = addslashes($_POST['price']);
  	//echo mysql_fetch_row($productID2);
  	$now = time();		//the current time
