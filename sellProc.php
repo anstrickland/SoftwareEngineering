@@ -23,16 +23,16 @@ if ($result==0) { noerror( $result ); }
  	$userID=($_SESSION['userID']);
  	echo $userID;
  	$productID="SELECT productID FROM Product WHERE Product.ISBN= '$isbn';";
- 	echo $productID;
+ 	$productID2=mysql_query($productID);
+ 	echo $productID2;
  	$price = addslashes($_POST['price']);
- 	//$productID2=mysql_query($productID);
  	//echo mysql_fetch_row($productID2);
  	$now = time();		//the current time
  	$whenPosted= date("Y-m-d", $now);
  
  
  $query="INSERT INTO Sales SET userID='$userID'," 
- 		."productID='$productID',"
+ 		."productID='$productID2',"
 		."price='$price',"
 		."whenPosted='$whenPosted';"; 
   //$result=
