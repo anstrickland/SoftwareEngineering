@@ -19,14 +19,10 @@ $result=mysql_query($query);
 if ($result==0) { noerror( $result ); }
 
 
- 	//$emailAddress= addslashes($_SESSION['email']);
  	$price = addslashes($_POST['price']);
- 	//$userID="SELECT userID FROM User WHERE email = '$emailAddress'";
  	$userID=($_SESSION['userID']);
- 	//$userID2=mysql_query($userID);
  	echo $userID;
- 	//echo mysql_fetch_row($userID2);
- 	//$productID="SELECT productID FROM Product WHERE Product.ISBN= '$isbn';";
+ 	$productID="SELECT productID FROM Product WHERE Product.ISBN= '$isbn';";
  	//$productID2=mysql_query($productID);
  	//echo mysql_fetch_row($productID2);
  	$now = time();		//the current time
@@ -34,7 +30,7 @@ if ($result==0) { noerror( $result ); }
  
  
  $query="INSERT INTO Sales SET userID='$userID'," 
- 		."productID='$productID2',"
+ 		."productID='$productID',"
 		."price='$price',"
 		."whenPosted='$whenPosted';"; 
   //$result=
