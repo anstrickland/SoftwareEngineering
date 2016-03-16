@@ -44,7 +44,7 @@ if($em!="" && $em==$email && $password!="" && $password==$pwas ) // no funny stu
       $_SESSION['userID']=$row['userID'];
        
       //if (!$bug) { header('Location: http://mcbitlab.com/thebookclub/begin.php'); exit; }
-      else { echo "bug pause, click <a href=\"home.html\">here</a> to continue. <br />\n";}
+     // else { echo "bug pause, click <a href=\"home.html\">here</a> to continue. <br />\n";}
    }
    else
    {
