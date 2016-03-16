@@ -23,7 +23,7 @@ if ($result==0) { noerror( $result ); }
  	$price = addslashes($_POST['price']);
  	//$userID="SELECT userID FROM User WHERE email = '$emailAddress'";
  	$userID=($_SESSION['userID']);
- 	$userID2=mysql_query($userID);
+ 	//$userID2=mysql_query($userID);
  	echo $userID;
  	//echo mysql_fetch_row($userID2);
  	//$productID="SELECT productID FROM Product WHERE Product.ISBN= '$isbn';";
@@ -33,7 +33,7 @@ if ($result==0) { noerror( $result ); }
  	$whenPosted= date("Y-m-d", $now);
  
  
- $query="INSERT INTO Sales SET userID='$userID2'," 
+ $query="INSERT INTO Sales SET userID='$userID'," 
  		."productID='$productID2',"
 		."price='$price',"
 		."whenPosted='$whenPosted';"; 
