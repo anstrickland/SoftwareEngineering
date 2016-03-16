@@ -13,11 +13,13 @@
 	//$isbn_slash = addslashes($isbn_raw);	//safely feature for isbn field
 	
 	$now = time();		//the current time
-	$order_placed = date("m-d-y", $now);
+	$order_placed = date("Y-m-d", $now);
 	
 	//placing the isbn number in the order table
 	//also places the date in the table (not sure if works)
-	$query = "INSERT INTO Order SET ISBN= '$isbn', whenOrderPlaced = '$order_placed';";
+	$query = "INSERT INTO Order SET"
+		."ISBN= '$isbn'" 
+		.",whenOrderPlaced = '$order_placed'";";
 	
 	$result = mysql_query($query);
 	if ($result == 0) { noerror($result);}
