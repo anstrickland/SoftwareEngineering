@@ -38,7 +38,7 @@ if ($result==0) { noerror( $result ); }
  
  
  $query="INSERT INTO Sales SET userID='$userID'," 
- 		."productID='$productID2',"
+ 		."productID=$obj->productID,"
 		."price='$price',"
 		."whenPosted='$whenPosted';"; 
   //$result=
