@@ -37,7 +37,7 @@ if ($result==0) { noerror( $result ); }
 		."whenPosted='$whenPosted';"; 
   //$result=
   mysql_query($query);
-  //if ($result==0) { noerror( $result ); }
+  if ($result==0) { noerror( $result ); }
  
    
  //header('Location: http://mcbitlab.com/thebookclub/sellMatch.php'); exit;
