@@ -23,10 +23,10 @@ if ($result==0) { noerror( $result ); }
  	$price = addslashes($_POST['price']);
  	$userID="SELECT userID FROM User WHERE email = '$emailAddress'";
  	$userID2=mysql_query($userID);
- 	echo $userID2;
+ 	echo mysql_fetch_row($userID2);
  	$productID="SELECT productID FROM Product WHERE Product.ISBN= '$isbn';";
  	$productID2=mysql_query($productID);
- 	echo $productID2;
+ 	echo mysql_fetch_row($productID2);
  	$now = time();		//the current time
  	$whenPosted= date("Y-m-d", $now);
  
