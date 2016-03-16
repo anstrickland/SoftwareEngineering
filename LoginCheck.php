@@ -42,7 +42,6 @@ if($em!="" && $em==$email && $password!="" && $password==$pwas ) // no funny stu
       $_SESSION['loginok']="yes";
       $_SESSION['first']=$row['first'];
       $_SESSION['userID']=$row['userID'];
-      echo $_SESSION['userID'];
        
       if (!$bug) { header('Location: http://mcbitlab.com/thebookclub/start.html'); exit; }
       else { echo "bug pause, click <a href=\"home.html\">here</a> to continue. <br />\n";}
