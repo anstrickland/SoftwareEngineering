@@ -1,5 +1,5 @@
 <?php
-	session_start();
+  session_start();
   include("includeMe.php");
   include("openDB.php");
   openDB();
@@ -23,9 +23,10 @@ if ($result==0) { noerror( $result ); }
  	$price = addslashes($_POST['price']);
  	$userID= "SELECT userID FROM User WHERE email = '$emailAddress';";
  	$userID2=mysql_query($userID);
+ 	echo userID2;
  	$productID="SELECT productID FROM Product WHERE ISBN= '$isbn';";
  	$productID2=mysql_query($productID);
- 	 //if ($productID2==0) { noerror( $productID2 ); }
+ 	echo productID2;
  	$now = time();		//the current time
  	$whenPosted= date("Y-m-d", $now);
  
