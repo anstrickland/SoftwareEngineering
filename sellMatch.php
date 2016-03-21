@@ -4,7 +4,13 @@
   include("openDB.php");
   openDB()
   
-  $query="SELECT * FROM BookOrder SET WHERE $isbn=BookOrder.ISBN";
+  $isbn = $_SESSION['isbn'];
+  $query="SELECT BookOrder.buyID, User.name, Product.title, Product.author, Product.edition, Product.ISBN 
+  FROM BookOrder WHERE $isbn=BookOrder.ISBN
+  JOIN User
+  ON BookOrder.userID = User.userID
+  JOIN Product
+  ON BookOrder.ISBN = Product.ISBN";
 
 $result=mysql_query($query);
 //if ($result==0) { noerror( $result ); }
@@ -40,5 +46,5 @@ if (noerror($result))
 		}
 			echo "  </tr> \n";
 		}
-  
+  	echo "</tbody></table>";
 ?>
