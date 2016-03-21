@@ -4,7 +4,7 @@
   include("openDB.php");
   openDB()
   
-  $isbn = $_SESSION['isbn'];
+  //$isbn = $_SESSION['isbn'];
   $query="SELECT BookOrder.buyID, User.name, Product.title, Product.author, Product.edition, Product.ISBN 
   FROM BookOrder WHERE $isbn=BookOrder.ISBN
   JOIN User
