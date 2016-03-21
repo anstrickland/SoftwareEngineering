@@ -14,7 +14,7 @@
 
 $result=mysql_query($query);
 //if ($result==0) { noerror( $result ); }
-
+<html>
 if (noerror($result))
 	{				
 		$nf = mysql_num_fields($result);
@@ -47,4 +47,5 @@ if (noerror($result))
 			echo "  </tr> \n";
 		}
   	echo "</tbody></table>";
+  </html>
 ?>
