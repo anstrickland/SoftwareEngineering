@@ -45,6 +45,7 @@ if ($result==0) { noerror( $result ); }
   mysql_query($query);
   if ($result==0) { noerror( $result ); }
  
+  $_SESSION['isbn'] = $isbn; 
    
  //header('Location: http://mcbitlab.com/thebookclub/sellMatch.php'); exit;
  ?>
