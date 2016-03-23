@@ -20,7 +20,7 @@
 <div id="menu">
 <ul class="nav nav-tabs nav-justified">
 	<li class="active"> <a href="home.html"> Home </a> </li>
-	<li> <a href="about.html"> About </a> </li>
+	<li> <a href="about.php"> About </a> </li>
 	<li> <a href="buy.php"> Buy </a> </li>
 	<li> <a href="sell.php"> Sell </a> </li> 
 </ul>
