@@ -11,7 +11,7 @@
 		<p>
 			Buy or Sell Your Textbooks Here.
 		</p>
-		<a href="buy.php"><button type ="button">Buy</button></a>
-		<a href="sell.php"><button type ="button">Sell</button></a>
+		<button type ="button"><a href="buy.php">Buy</a></button>
+		<button type ="button"><a href="sell.php">Sell</a></button>
 	</body>
 </html>
