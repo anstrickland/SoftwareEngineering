@@ -21,7 +21,7 @@ if ($result==0) { noerror( $result ); }
 
  	$price = addslashes($_POST['price']);
  	$userID=($_SESSION['userID']);
- 	echo $userID;
+ //	echo $userID;
  	$productID="SELECT productID FROM Product WHERE Product.ISBN= '$isbn' limit 1";
  	$productID2=mysql_query($productID);
  	
