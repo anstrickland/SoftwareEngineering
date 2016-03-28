@@ -45,5 +45,4 @@ if (noerror($result))
 		}
 			echo "  </tr> \n";
 		}
-  	echo "</tbody></table>";
-?>
+  	echo "</tbody></table>"; ?>
