@@ -1,5 +1,6 @@
 <?php
  include("includeMe.php");
+ include("header.php"); 
  include("openDB.php"); //in the same folder
   openDB();
 ?>
