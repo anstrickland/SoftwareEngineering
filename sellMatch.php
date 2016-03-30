@@ -55,7 +55,6 @@
 			echo "  </tr> \n";
 		}
 		   
-            echo "
       echo "</tbody></table>";
 	}
   
