@@ -18,4 +18,7 @@
   $result=mysql_query($query);
   if ($result==0) { noerror( $result ); }
   if (noerror($result))
+  
+  echo "result";
+  
  ?>
