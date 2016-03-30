@@ -22,7 +22,7 @@
   if (noerror($result))
   
   $row=mysql_fetch_array($result);
-  echo "$row";
+  var_dump($row);
   
   
  ?>
