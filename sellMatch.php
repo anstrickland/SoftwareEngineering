@@ -21,6 +21,8 @@
   if ($result==0) { noerror( $result ); }
   if (noerror($result))
   
-  echo "$result";
+  $row=mysql_fetch_array($result);
+  echo "$row";
+  
   
  ?>
