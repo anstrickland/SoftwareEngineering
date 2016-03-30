@@ -84,7 +84,9 @@ body {
       </tr>
 	  <tr>
          <td align="right">Phone Number </td>
-         <td> <input type="text" name="phoneNumber" /> </td>
+         <td> <input type="text" name="phoneNumber" 
+         placeholder="(nnn) nnn-nnnn"
+	pattern=" ^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$"/> </td>
       </tr>
       <tr>
          <td> <button type="submit" class="btn btn-default">Submit</button> </td>
