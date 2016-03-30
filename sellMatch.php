@@ -15,6 +15,7 @@
   WHERE $isbn=BookOrder.ISBN";
 
 	echo "Sell matches go here";
+	echo $isbn;
 
   $result=mysql_query($query);
   if ($result==0) { noerror( $result ); }
