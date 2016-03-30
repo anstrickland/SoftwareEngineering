@@ -14,15 +14,11 @@
   ON BookOrder.ISBN = Product.ISBN
   WHERE $isbn=BookOrder.ISBN";
 
-	echo "Sell matches go here";
-	//echo $isbn;
+	echo "The following is a list of people who want to buy your book. You can contact them by using the email address listed beside their name. ";
+
 
   $result=mysql_query($query);
-  if ($result==0) { noerror( $result ); }
-  //if (noerror($result))
-  
-  //$row=mysql_fetch_array($result);
-  //var_dump($row);
+  if ($result==0) { noerror( $result ); 
   
   if (noerror($result))
 	{				
