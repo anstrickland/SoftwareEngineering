@@ -7,11 +7,12 @@
   
   $isbn = $_SESSION['isbn'];
   $query="SELECT BookOrder.buyID, User.name, Product.title, Product.author, Product.edition, Product.ISBN 
-  FROM BookOrder WHERE $isbn=BookOrder.ISBN
+  FROM BookOrder 
   JOIN User
   ON BookOrder.userID = User.userID
   JOIN Product
-  ON BookOrder.ISBN = Product.ISBN";
+  ON BookOrder.ISBN = Product.ISBN
+  WHERE $isbn=BookOrder.ISBN";
 
 	echo "Sell matches go here";
 
