@@ -21,6 +21,6 @@
   if ($result==0) { noerror( $result ); }
   if (noerror($result))
   
-  echo "result";
+  echo "$result";
   
  ?>
