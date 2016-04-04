@@ -5,7 +5,18 @@
   include("openDB.php");
   openDB();
   
-  $isbn = $_SESSION['isbn'];
+ 	$isbn = $_SESSION['isbn'];
+	$q="SELECT * from BookOrder where ISBN= '$isbn';" ;
+
+ 	$result = mysql_query($q); //returning whats in the table
+	if(noerror($result))
+	{
+		tabledump($result);
+	}
+	 
+  
+  
+/*  $isbn = $_SESSION['isbn'];
   $query="SELECT BookOrder.buyID, User.name, Product.title, Product.author, Product.edition, Product.ISBN 
   FROM BookOrder 
   JOIN User
@@ -19,7 +30,7 @@
 
   $result=mysql_query($query);
   if ($result==0) { noerror( $result );} 
-  
+ 
   if (noerror($result))
 	{				
 		$nf = mysql_num_fields($result);
@@ -52,5 +63,5 @@
 		}
 		   
       echo "</tbody></table>";
-	}
+	} */
 ?>
