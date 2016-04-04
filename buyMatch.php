@@ -13,7 +13,7 @@
 
 <?php
 	
-	$q="SELECT *from Product where ISBN='$ISBN';" ;
+	$q="SELECT *from Product where ISBN='$isbn';" ;
  	$result = mysql_query($q); //returning whats in the table
 	if(noerror($result))
 	{
