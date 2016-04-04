@@ -13,7 +13,7 @@ $query="INSERT INTO Product SET"
 ."      title='$title'" 
 ."      ,author='$author'"
 ."      ,edition='$edition'" 
-."      ,isbn='$isbn'" 
+."      ,ISBN='$isbn'" 
 ." ;";
 $result=mysql_query($query);
 if ($result==0) { noerror( $result ); }
