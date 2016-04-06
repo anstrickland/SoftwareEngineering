@@ -1,4 +1,5 @@
 <?php
+ session_start();
  include("includeMe.php");
  include("header.php"); 
  include("openDB.php"); //in the same folder
