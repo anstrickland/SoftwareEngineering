@@ -31,6 +31,7 @@
 
 
   $result=mysql_query($query);
+  $count2=mysql_query($count);
   if ($result==0) { noerror( $result );} 
  
   if (noerror($result))
