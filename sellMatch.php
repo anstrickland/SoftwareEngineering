@@ -32,6 +32,7 @@
 
   $result=mysql_query($query);
   $count2=mysql_query($count);
+  echo $count2;
   if ($result==0) { noerror( $result );} 
  
   if (noerror($result))
@@ -53,7 +54,7 @@
 			echo "<th> ISBN </th>";
         echo "</tr>";
         echo "</thead><tbody>";
-		for($i=0; $i<$count; $i++)
+		for($i=0; $i<$nr; $i++)
 		{
 			echo "<tr>";
 			$row=mysql_fetch_array($result);
