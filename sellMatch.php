@@ -5,6 +5,7 @@
   include("openDB.php");
   openDB();
   
+  /*
  	$isbn = $_SESSION['isbn'];
 	$q="SELECT * from BookOrder where ISBN= '$isbn';" ;
 
@@ -13,10 +14,9 @@
 	{
 		tabledump($result);
 	}
-	 
+  */
   
-  
-/*  $isbn = $_SESSION['isbn'];
+  $isbn = $_SESSION['isbn'];
   $query="SELECT BookOrder.buyID, User.name, Product.title, Product.author, Product.edition, Product.ISBN 
   FROM BookOrder 
   JOIN User
@@ -63,5 +63,5 @@
 		}
 		   
       echo "</tbody></table>";
-	} */
+	} 
 ?>
