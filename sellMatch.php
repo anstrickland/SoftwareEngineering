@@ -59,7 +59,7 @@
 
 			for ( $j=0; $j<$nf; $j++ )
 			{			
-				echo "    <td>" . $row[$i] . "</td> \n";
+				echo "    <td>" . $row[$j] . "</td> \n";
 			}
 			echo "  </tr> \n";
 		
