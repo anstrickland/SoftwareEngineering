@@ -13,12 +13,14 @@
 <h1> List of Book Matches </h1>
 
 <?php
+	$isbn=$_SESSION['isbn'];
 	$q="SELECT * from Product where ISBN='$isbn';" ;
  	$result = mysql_query($q); //returning whats in the table
 	if(noerror($result))
 	{
 		tabledump($result);
 	}
+?>
 	
 /*
 	$q="SELECT * from Product where ISBN='$isbn';" ;
