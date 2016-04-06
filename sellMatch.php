@@ -24,6 +24,8 @@
   JOIN Product
   ON BookOrder.ISBN = Product.ISBN
   WHERE $isbn=BookOrder.ISBN";
+  
+  $count="SELECT COUNT(ISBN) FROM BookOrder WHERE $isbn=BookOrder.ISBN";
 
 	echo "The following is a list of people who want to buy your book. You can contact them by using the email address listed beside their name. ";
 
@@ -50,20 +52,17 @@
 			echo "<th> ISBN </th>";
         echo "</tr>";
         echo "</thead><tbody>";
-		for($i=0; $i<$nr; $i++)
+		for($i=0; $i<$count; $i++)
 		{
 			echo "<tr>";
 			$row=mysql_fetch_array($result);
-			echo "    <td>" . $row[$j] . "</td> \n";
 
-		
-		/*
-		for ( $j=0; $j<$nf; $j++ )
-		{			
+			for ( $j=0; $j<$nf; $j++ )
+			{			
 				echo "    <td>" . $row[$j] . "</td> \n";
-		}
+			}
 			echo "  </tr> \n";
-		*/
+		
 		}
 		   
       echo "</tbody></table>";
