@@ -20,7 +20,6 @@
 	{
 		tabledump($result);
 	}
-?>
 	
 /*
 	$q="SELECT * from Product where ISBN='$isbn';" ;
