@@ -60,7 +60,7 @@
 			echo "<tr>";
 			$row=mysql_fetch_array($result);
 
-			for ( $j=0; $j<$nf; $j++ )
+			for ( $j=0; $j<$nr; $j++ )
 			{			
 				echo "    <td>" . $row[$j] . "</td> \n";
 			}
