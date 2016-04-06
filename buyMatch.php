@@ -13,7 +13,6 @@
 <h1> List of Book Matches </h1>
 
 <?php
-/*	
 	$q="SELECT * from Product where ISBN='$isbn';" ;
  	$result = mysql_query($q); //returning whats in the table
 	if(noerror($result))
@@ -21,8 +20,7 @@
 		tabledump($result);
 	}
 	
-*/	 
-//	$q="SELECT * from CupcakeOrder;" ;
+/*
 	$q="SELECT * from Product where ISBN='$isbn';" ;
  	$result = mysql_query($q); //returning whats in the table
 	
@@ -52,7 +50,7 @@
 			
 		}
 		echo "</table>";
-	}
+	} */
 ?>
 </body>
 </html>
