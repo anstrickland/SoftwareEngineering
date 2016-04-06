@@ -50,17 +50,20 @@
 			echo "<th> ISBN </th>";
         echo "</tr>";
         echo "</thead><tbody>";
-		for($i=0; $i<$nf; $i++)
+		for($i=0; $i<$nr; $i++)
 		{
 			echo "<tr>";
 			$row=mysql_fetch_array($result);
+			echo "    <td>" . $row[$j] . "</td> \n";
+
 		
-		
+		/*
 		for ( $j=0; $j<$nf; $j++ )
 		{			
 				echo "    <td>" . $row[$j] . "</td> \n";
 		}
 			echo "  </tr> \n";
+		*/
 		}
 		   
       echo "</tbody></table>";
