@@ -38,12 +38,12 @@
 	   for($i=0; $i<$nr; $i++)
 		{
 			$row =mysql_fetch_array($result);
-			""
+			
 			$productID= $row['productID'];
 			$title = $row['title'];
 			$author = $row['author'];
 			$edition= $row['edition'];
-			$ISBN = $row['ISBN'];
+			$ISBN = $row['isbn'];
 
 			
 			echo "<tr><td style=\"border: 1px solid black;\">$productID</td> <td style=\"border: 1px solid black;\">$title</td> <td style=\"border: 1px solid black;\">$author</td>
