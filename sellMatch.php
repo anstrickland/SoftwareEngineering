@@ -17,7 +17,7 @@
   */
   
   $isbn = $_SESSION['isbn'];
-  $query="SELECT BookOrder.buyID, User.name, Product.title, Product.author, Product.edition, Product.ISBN 
+  $query="SELECT BookOrder.buyID, User.name, User.email, Product.title, Product.author, Product.edition, Product.ISBN 
   FROM BookOrder 
   JOIN User
   ON BookOrder.userID = User.userID
