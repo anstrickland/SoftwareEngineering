@@ -44,7 +44,7 @@
                 echo "<table class =table table-striped>";
   
 
-		echo "<th>Sale ID </th>
+		echo "
 	 	      <th>Seller Name</th>
                       <th>Seller Email</th>
 		      <th>Title</th>
@@ -55,26 +55,30 @@
 		{
 			$row =mysql_fetch_array($result);
 			
-			for($j=0; $j<$nf; $j++)
+			/* for($j=0; $j<$nf; $j++)
 			{
 				echo $row[$j];
 				
 			}
-			/*
-			$productID= $row['productID'];
+			*/
+
+			//$productID= $row['productID'];
+                       //$saleID= $row['saleID'];
+                       $name= $row['name'];
                         $email= $row['email'];
 			$title = $row['title'];
 			$author = $row['author'];
 			$edition= $row['edition'];
 			$isbn= $row['ISBN'];
 			
-			echo "<tr><td>$productID</td> 
+			echo "<tr> 
+                         <td>$name</td>
                          <td>$email</td>
                           <td>$title</td> 
                          <td>$author</td>
 			 <td>$edition</td> 
                         <td>$isbn</td>";
-			*/
+			
 		}
 		echo "</table>";
                  echo "</div>";  echo "</div>";  
