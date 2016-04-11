@@ -4,13 +4,12 @@
   include("includeMe.php");
   include("openDB.php");
   openDB();
-  
   /*
  	$isbn = $_SESSION['isbn'];
 	$q="SELECT * from BookOrder where ISBN= '$isbn';" ;
 
  	$result = mysql_query($q); //returning whats in the table
-	if(noerror($result))
+	if(noerror($result)
 	{
 		tabledump($result);
 	}
