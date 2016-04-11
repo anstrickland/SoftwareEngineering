@@ -14,42 +14,74 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
+
 <body>
 <div class="container">
 <h2>Results</h2>
 <p>These people are selling the book you are looking for:</p> 
+<center>
+
 
 <?php
-$isbn=$_SESSION['isbn'];
-$q="SELECT * from Product where ISBN='$isbn';" ;
+
+        $isbn=$_SESSION['isbn'];
+        $q="SELECT Sales.saleID, User.name, User.email, Product.title, Product.author, Product.edition, Product.ISBN 
+        FROM Sales
+        JOIN User
+        ON Sales.userID = User.userID
+        JOIN Product
+        ON Sales.productID = Product.productID
+        WHERE $isbn=Product.ISBN";
+
  	$result = mysql_query($q); //returning whats in the table
+	if ($result==0) { noerror( $result );} 
 	
 	if(noerror($result))
 	{
+		$nf = mysql_num_fields($result);
 		$nr = mysql_num_rows($result);
-		echo "<table style=\"border: 1px solid black;\">";
-		echo "<th style=\"border: 1px solid black;\">Product ID </th>
-			 <th style=\"border: 1px solid black;\">Title</th>
-			 <th style=\"border: 1px solid black;\">Author</th>
-			 <th style=\"border: 1px solid black;\">Edition</th>
-			 <th style=\"border: 1px solid black;\">ISBN </th>";
+                echo "<div class=container>";                
+                echo "<table class =table table-striped>";
+  
+
+		echo "<th>Sale ID </th>
+	 	      <th>Seller Name</th>
+                      <th>Seller Email</th>
+		      <th>Title</th>
+		      <th>Author</th>
+		      <th>Edition</th>
+		      <th>ISBN </th>";
 	   for($i=0; $i<$nr; $i++)
 		{
 			$row =mysql_fetch_array($result);
 			
+			for($j=0; $j<$nf; $j++)
+			{
+				echo $row[$j];
+				
+			}
+			/*
 			$productID= $row['productID'];
+                        $email= $row['email'];
 			$title = $row['title'];
 			$author = $row['author'];
 			$edition= $row['edition'];
 			$isbn= $row['ISBN'];
 			
-			echo "<tr><td style=\"border: 1px solid black;\">$productID</td> <td style=\"border: 1px solid black;\">$title</td> <td style=\"border: 1px solid black;\">$author</td>
-			<td style=\"border: 1px solid black;\">$edition</td> <td style=\"border: 1px solid black;\">$isbn</td>";
-			
+			echo "<tr><td>$productID</td> 
+                         <td>$email</td>
+                          <td>$title</td> 
+                         <td>$author</td>
+			 <td>$edition</td> 
+                        <td>$isbn</td>";
+			*/
 		}
 		echo "</table>";
+                 echo "</div>";  echo "</div>";  
 	} 
+
 ?>
 </div>
 </body>
+</center>
 </html>
