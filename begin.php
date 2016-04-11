@@ -4,8 +4,8 @@
 	include("includeMe.php");
 	include("openDB.php");
   	openDB();
-	$userID= $_SESSION['userID'];
-	echo $userID;
+	$email= $_SESSION['email'];
+	echo $email;
 ?>
 
 <html>
