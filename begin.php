@@ -12,7 +12,8 @@
  
   	if (noerror($result))
   	{
-           echo $result;
+  	   $row=mysql_fetch_array($result);
+           echo $row;
   	}
 ?>
 
