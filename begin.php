@@ -4,11 +4,14 @@
 	include("includeMe.php");
 	include("openDB.php");
   	openDB();
+  	$userID= $_SESSION['userID'];
+	echo $userID;
 	$email= $_SESSION['email'];
 	echo $email;
 ?>
 
 <html>
+	<center>
 	<head>
 		<title> Libro To Go </title>
 	</head>
@@ -20,4 +23,5 @@
 		<button type ="button"><a href="buy.php">Buy</a></button>
 		<button type ="button"><a href="sell.php">Sell</a></button>
 	</body>
+	</center>
 </html>
