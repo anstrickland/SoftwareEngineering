@@ -1,5 +1,10 @@
 <?php  
+	session_start();
 	include("header.php"); 
+	include("includeMe.php");
+	include("openDB.php");
+  	openDB();
+	$userID= $_SESSION['userID'];
 ?>
 
 <html>
