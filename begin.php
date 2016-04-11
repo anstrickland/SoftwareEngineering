@@ -5,6 +5,7 @@
 	include("openDB.php");
   	openDB();
 	$userID= $_SESSION['userID'];
+	echo $userID;
 ?>
 
 <html>
