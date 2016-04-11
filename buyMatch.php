@@ -25,7 +25,7 @@
 <?php
 
         $isbn=$_SESSION['isbn'];
-        $q="SELECT Sales.saleID, User.name, User.email, Product.title, Product.author, Product.edition, Product.ISBN 
+        $q="SELECT Sales.saleID, Sales.price, User.name, User.email, Product.title, Product.author, Product.edition, Product.ISBN 
         FROM Sales
         JOIN User
         ON Sales.userID = User.userID
@@ -50,18 +50,13 @@
 		      <th>Title</th>
 		      <th>Author</th>
 		      <th>Edition</th>
-		      <th>ISBN </th>";
+		      <th>Price </th>
+                       <th>ISBN</th>";
+
 	   for($i=0; $i<$nr; $i++)
 		{
 			$row =mysql_fetch_array($result);
 			
-			/* for($j=0; $j<$nf; $j++)
-			{
-				echo $row[$j];
-				
-			}
-			*/
-
 			//$productID= $row['productID'];
                        //$saleID= $row['saleID'];
                        $name= $row['name'];
@@ -69,6 +64,7 @@
 			$title = $row['title'];
 			$author = $row['author'];
 			$edition= $row['edition'];
+                       $price= $row['price'];
 			$isbn= $row['ISBN'];
 			
 			echo "<tr> 
@@ -77,6 +73,7 @@
                           <td>$title</td> 
                          <td>$author</td>
 			 <td>$edition</td> 
+                         <td>$$price</td> 
                         <td>$isbn</td>";
 			
 		}
