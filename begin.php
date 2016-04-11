@@ -6,7 +6,7 @@
   	openDB();
   	$userID= $_SESSION['userID'];
 	echo $userID;
-	$email= $_SESSION['em'];
+	$email= $_SESSION['email'];
 	echo $email;
 ?>
 
