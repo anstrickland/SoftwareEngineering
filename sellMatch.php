@@ -20,13 +20,10 @@
 <div class="container">
 <center>
 <h2>Results </h2>
-<p>The following is a list of people who want to buy your book. You can contact them by using the             email address listed beside their name.</p>
-
+<p>The following is a list of people who want to buy your book. You can contact them by using the email address listed beside their name.</p>
 <?php  
-
-
       $isbn = $_SESSION['isbn'];
-      $query="SELECT BookOrder.buyID, User.name, User.email, Product.title, Product.author,          Product.edition, Product.ISBN 
+      $query="SELECT BookOrder.buyID, User.name, User.email, Product.title, Product.author, Product.edition, Product.ISBN, Product.bookCondition 
      FROM BookOrder 
      JOIN User
      ON BookOrder.userID = User.userID
@@ -59,6 +56,7 @@ WHERE $isbn=BookOrder.ISBN";
 			echo "<th> Author </th>";
 			echo "<th> Edition </th>";
 			echo "<th> ISBN </th>";
+			echo "<th> Book Condition </th>";
         echo "</tr>";
         echo "</thead><tbody>";
 		for($i=0; $i<$nr; $i++)
@@ -72,6 +70,7 @@ WHERE $isbn=BookOrder.ISBN";
 			$author = $row['author'];
 			$edition= $row['edition'];
 			$isbn= $row['ISBN'];
+			$bookCondition= $row['bookCondition'];
 			
 			echo "<tr> 
                          <td>$name</td>
@@ -79,7 +78,8 @@ WHERE $isbn=BookOrder.ISBN";
                           <td>$title</td> 
                          <td>$author</td>
 			 <td>$edition</td> 
-                        <td>$isbn</td>";
+                        <td>$isbn</td>;
+                        <td>$bookCondition</td></tr>";
 		
 		}
 		   
