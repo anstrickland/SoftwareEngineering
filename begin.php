@@ -12,8 +12,8 @@
  
   	if (noerror($result))
   	{
-  	   $row=mysql_fetch_object($result);
-           echo $row;
+  	   //$row=mysql_fetch_object($result);
+           echo $result;
   	}
 ?>
 
