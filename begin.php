@@ -13,8 +13,9 @@
   	if (noerror($result))
   	{
   	   $obj=mysql_fetch_object($result);
-           echo $obj->$query;
   	}
+  	
+  	echo $obj->$query;
 ?>
 
 <html>
