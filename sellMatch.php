@@ -4,18 +4,26 @@
   include("includeMe.php");
   include("openDB.php");
   openDB();
-  /*
- 	$isbn = $_SESSION['isbn'];
-	$q="SELECT * from BookOrder where ISBN= '$isbn';" ;
+?>
 
- 	$result = mysql_query($q); //returning whats in the table
-	if(noerror($result)
-	{
-		tabledump($result);
-	}
-  */
-  
-  $isbn = $_SESSION['isbn'];
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+<center>
+
+<?php  
+
+
+ $isbn = $_SESSION['isbn'];
   $query="SELECT BookOrder.buyID, User.name, User.email, Product.title, Product.author, Product.edition, Product.ISBN 
   FROM BookOrder 
   JOIN User
@@ -23,7 +31,7 @@
   JOIN Product
   ON BookOrder.ISBN = Product.ISBN
   WHERE $isbn=BookOrder.ISBN";
-  
+
 
 	echo "The following is a list of people who want to buy your book. You can contact them by using the email address listed beside their name. ";
 
@@ -33,15 +41,17 @@
  
   if (noerror($result))
 	{				
+
+                echo "<div class=container>";
+                echo "<table class= table table-striped>";
 		$nf = mysql_num_fields($result);
 		$nr = mysql_num_rows($result);
-		echo $nr; 
-		echo "<table border='1'> <thead>";
-		echo "<caption>";
+		//echo $nr; 
+		//echo "<table border='1'> <thead>";
+		//echo "<caption>";
 
-		echo "</caption> \n";
-        echo "<tr>";
-		
+		//echo "</caption> \n";
+       echo "<tr>";
 			echo "<th> Buy ID </th>";
 			echo "<th> Name </th>";
 			echo "<th> Email </th>";
@@ -64,6 +74,10 @@
 		
 		}
 		   
-      echo "</tbody></table>";
+      echo "</tbody></table></div>";
 	} 
 ?>
+</center>
+</div>
+</body>
+</html>
