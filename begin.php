@@ -5,17 +5,17 @@
 	include("openDB.php");
   	openDB();
   	$userID= $_SESSION['userID'];
-	echo $userID;
+	//echo $userID;
 	$query="SELECT User.name FROM User WHERE $userID=User.userID";
 	$result=mysql_query($query);
   	if ($result==0) { noerror( $result );} 
- 	echo 'Number of Rows: ' . mysql_num_rows($result);
+ 	//echo 'Number of Rows: ' . mysql_num_rows($result);
  
   	if (noerror($result))
   	{
   	  $nobj=mysql_fetch_array($result);
   	  $name= $nobj['name'];
-  	  echo $name;
+  	  echo "Hi" . " " . $name;
   	  //var_dump($result);
   	}
 ?>
