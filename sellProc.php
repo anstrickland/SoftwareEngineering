@@ -8,17 +8,21 @@
 	$author = addslashes($_POST['author']);
 	$edition = addslashes($_POST['edition']);
 	$isbn = addslashes($_POST['isbn']);
-	
+	$bookCondition= ($_POST['bookCondition']);
+
 $query="INSERT INTO Product SET"
 ."      title='$title'" 
 ."      ,author='$author'"
 ."      ,edition='$edition'" 
 ."      ,ISBN='$isbn'" 
+."      ,bookCondition='$bookCondition'" 
 ." ;";
+
 $result=mysql_query($query);
 if ($result==0) { noerror( $result ); }
 
-
+$isbn=@addslashes($_POST['isbn']);
+$_SESSION['isbn']=$isbn;
  	$price = addslashes($_POST['price']);
  	$userID=($_SESSION['userID']);
  //	echo $userID;
