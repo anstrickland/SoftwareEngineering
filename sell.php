@@ -25,6 +25,10 @@
          <td><input type="text" name="isbn" required></td>
       </tr>
       <tr>
+         <td>Book Condition</td>
+         <td> <input type="text" name="bookCondition"></td>
+      </tr>
+      <tr>
          <td>Price</td>
          <td> <input type="text" name="price" required></td>
       </tr>
