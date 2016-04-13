@@ -15,7 +15,7 @@
   	{
   	  $nobj=mysql_fetch_array($result);
   	  $name= $nobj['name'];
-  	  echo "Hi" . " " . $name;
+  	  echo "Hi" . " " . '<a href = "http://mcbitlab.com/thebookclub/user_profile.php?query='.$name.'">'.$name.'</a>';
   	  //var_dump($result);
   	}
 ?>
