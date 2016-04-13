@@ -8,7 +8,7 @@
 	echo $userID;
 	$query="SELECT User.name FROM User WHERE $userID=User.userID";
 	$result=mysql_query($query);
-  	//if ($result==0) { noerror( $result );} 
+  	if ($result==0) { noerror( $result );} 
  
   	if (noerror($result))
   	{
