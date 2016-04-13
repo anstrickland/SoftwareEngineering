@@ -13,7 +13,9 @@
  
   	if (noerror($result))
   	{
-  	   var_dump($result);
+  	  $nobj=mysql_fetch_array($result);
+  	  $name= $nobj['name'];
+  	  //var_dump($result);
   	}
 ?>
 
