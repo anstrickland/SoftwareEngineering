@@ -12,10 +12,8 @@
  
   	if (noerror($result))
   	{
-  	   $obj=mysql_fetch_object($result);
+  	   var_dump($result);
   	}
-  	
-  	echo $obj;
 ?>
 
 <html>
