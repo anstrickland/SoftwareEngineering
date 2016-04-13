@@ -19,21 +19,21 @@
 
 <div class="container">
 <center>
+<h2>Results </h2>
+<p>The following is a list of people who want to buy your book. You can contact them by using the             email address listed beside their name.</p>
 
 <?php  
 
 
- $isbn = $_SESSION['isbn'];
-  $query="SELECT BookOrder.buyID, User.name, User.email, Product.title, Product.author, Product.edition, Product.ISBN 
-  FROM BookOrder 
-  JOIN User
-  ON BookOrder.userID = User.userID
-  JOIN Product
-  ON BookOrder.ISBN = Product.ISBN
-  WHERE $isbn=BookOrder.ISBN";
+      $isbn = $_SESSION['isbn'];
+      $query="SELECT BookOrder.buyID, User.name, User.email, Product.title, Product.author,          Product.edition, Product.ISBN 
+     FROM BookOrder 
+     JOIN User
+     ON BookOrder.userID = User.userID
+     JOIN Product
+     ON BookOrder.ISBN = Product.ISBN
+WHERE $isbn=BookOrder.ISBN";
 
-
-	echo "The following is a list of people who want to buy your book. You can contact them by using the email address listed beside their name. ";
 
 
   $result=mysql_query($query);
@@ -52,7 +52,7 @@
 
 		//echo "</caption> \n";
        echo "<tr>";
-			echo "<th> Buy ID </th>";
+
 			echo "<th> Name </th>";
 			echo "<th> Email </th>";
 			echo "<th> Title </th>";
@@ -63,14 +63,23 @@
         echo "</thead><tbody>";
 		for($i=0; $i<$nr; $i++)
 		{
-			echo "<tr>";
-			$row=mysql_fetch_array($result);
+                      
+                     $row=mysql_fetch_array($result);			
 
-			for ( $j=0; $j<$nf; $j++ )
-			{			
-				echo "    <td>" . $row[$j] . "</td> \n";
-			}
-			echo "  </tr> \n";
+                       $name= $row['name'];
+                        $email= $row['email'];
+			$title = $row['title'];
+			$author = $row['author'];
+			$edition= $row['edition'];
+			$isbn= $row['ISBN'];
+			
+			echo "<tr> 
+                         <td>$name</td>
+                         <td>$email</td>
+                          <td>$title</td> 
+                         <td>$author</td>
+			 <td>$edition</td> 
+                        <td>$isbn</td>";
 		
 		}
 		   
