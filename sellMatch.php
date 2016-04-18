@@ -78,7 +78,7 @@ WHERE $isbn=BookOrder.ISBN";
                          <td>$title</td> 
                          <td>$author</td>
 			 <td>$edition</td> 
-                         <td>$isbn</td>;"
+                         <td>$isbn</td>";
 
 		}
 		   
