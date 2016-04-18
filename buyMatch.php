@@ -25,7 +25,7 @@
 <?php
 
         $isbn=$_SESSION['isbn'];
-        $q="SELECT Sales.saleID, Sales.price, User.name, User.email, Product.title, Product.author, Product.edition, Product.ISBN 
+        $q="SELECT Sales.saleID, Sales.price, User.name, User.email, Product.title, Product.author, Product.edition, Product.ISBN, Product.bookCondition 
         FROM Sales
         JOIN User
         ON Sales.userID = User.userID
@@ -51,6 +51,7 @@
 		      <th>Author</th>
 		      <th>Edition</th>
 		      <th>Price </th>
+		      <th>Book Condition</th>
                        <th>ISBN</th>";
 
 	   for($i=0; $i<$nr; $i++)
@@ -65,6 +66,7 @@
 			$author = $row['author'];
 			$edition= $row['edition'];
                        $price= $row['price'];
+                       $bookCondition= $row['bookCondition'];
 			$isbn= $row['ISBN'];
 			
 			echo "<tr> 
@@ -73,7 +75,8 @@
                           <td>$title</td> 
                          <td>$author</td>
 			 <td>$edition</td> 
-                         <td>$$price</td> 
+                         <td>$$price</td>
+                        <td>$bookCondition</td> 
                         <td>$isbn</td>";
 			
 		}
