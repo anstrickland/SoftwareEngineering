@@ -75,14 +75,14 @@ WHERE $isbn=BookOrder.ISBN";
 			echo "<tr> 
                          <td>$name</td>
                          <td>$email</td>
-                          <td>$title</td> 
+                         <td>$title</td> 
                          <td>$author</td>
 			 <td>$edition</td> 
-                        <td>$isbn</td>;
+                         <td>$isbn</td>;"
 
 		}
 		   
-      echo "</tbody></table></div>";
+      	echo "</tbody></table></div>";
 	} 
 ?>
 </center>
