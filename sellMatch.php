@@ -56,7 +56,7 @@ WHERE $isbn=BookOrder.ISBN";
 			echo "<th> Author </th>";
 			echo "<th> Edition </th>";
 			echo "<th> ISBN </th>";
-			echo "<th> Book Condition </th>";
+		//	echo "<th> Book Condition </th>";
         echo "</tr>";
         echo "</thead><tbody>";
 		for($i=0; $i<$nr; $i++)
@@ -70,7 +70,7 @@ WHERE $isbn=BookOrder.ISBN";
 			$author = $row['author'];
 			$edition= $row['edition'];
 			$isbn= $row['ISBN'];
-			$bookCondition= $row['bookCondition'];
+		//	$bookCondition= $row['bookCondition'];
 			
 			echo "<tr> 
                          <td>$name</td>
@@ -79,8 +79,7 @@ WHERE $isbn=BookOrder.ISBN";
                          <td>$author</td>
 			 <td>$edition</td> 
                         <td>$isbn</td>;
-                        <td>$bookCondition</td></tr>";
-		
+
 		}
 		   
       echo "</tbody></table></div>";
