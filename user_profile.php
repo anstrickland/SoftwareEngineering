@@ -7,5 +7,10 @@
   
   $userID=($_SESSION['userID']);
   $name=($_SESSION['name']);
-  echo "Hi ".$name." "."Your userID is ".$userID;
+  echo <center>;
+  echo "Hi ".$name;
+  echo "Your information:";
+  echo "UserID: ".$userID;
+  echo "Email: ".$userID;
+  echo </center>;
 ?>
