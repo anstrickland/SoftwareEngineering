@@ -6,5 +6,6 @@
   
   
   $userID=($_SESSION['userID']);
-  echo $userID;
+  $name=($_SESSION['name']);
+  echo "Hi ".$name." "."Your userID is ".$userID;
 ?>
