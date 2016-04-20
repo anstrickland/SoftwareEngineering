@@ -13,5 +13,8 @@
   echo "Your information: \n";
   echo "UserID: ".$userID."\n";
   echo "Email: ".$email."\n";
+  echo "These are the books you are trying to sell: \n";
+  
+  
   echo "</center>";
 ?>
