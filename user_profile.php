@@ -11,6 +11,6 @@
   echo "Hi ".$name;
   echo "Your information:";
   echo "UserID: ".$userID;
-  echo "Email: ".$userID;
+  echo "Email: ".$email;
   echo </center>;
 ?>
