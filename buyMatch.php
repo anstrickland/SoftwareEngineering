@@ -50,8 +50,8 @@
 		      <th>Title</th>
 		      <th>Author</th>
 		      <th>Edition</th>
-		      <th>Price </th>
 		      <th>Book Condition</th>
+		      <th>Price </th>
                        <th>ISBN</th>";
 
 	   for($i=0; $i<$nr; $i++)
@@ -65,8 +65,8 @@
 			$title = $row['title'];
 			$author = $row['author'];
 			$edition= $row['edition'];
+		        $bookCondition= $row['bookCondition'];
                        $price= $row['price'];
-                       $bookCondition= $row['bookCondition'];
 			$isbn= $row['ISBN'];
 			
 			echo "<tr> 
@@ -75,8 +75,8 @@
                           <td>$title</td> 
                          <td>$author</td>
 			 <td>$edition</td> 
+		        <td>$bookCondition</td> 
                          <td>$$price</td>
-                        <td>$bookCondition</td> 
                         <td>$isbn</td>";
 			
 		}
