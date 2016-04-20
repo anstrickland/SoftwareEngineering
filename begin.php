@@ -6,6 +6,7 @@
   	openDB();
   	$userID= $_SESSION['userID'];
   	$name= $_SESSION['name'];
+  	$email= $_SESSION['email'];
 	$query="SELECT User.name FROM User WHERE $userID=User.userID";
 	$result=mysql_query($query);
   	if ($result==0) { noerror( $result );} 
