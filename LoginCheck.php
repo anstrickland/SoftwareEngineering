@@ -42,6 +42,7 @@ if($em!="" && $em==$email && $password!="" && $password==$pwas ) // no funny stu
       $_SESSION['loginok']="yes";
       $_SESSION['email']=$row['email'];
       $_SESSION['userID']=$row['userID'];
+      $_SESSION['name']=$row['name'];
       
       //echo $_SESSION['email'];
       //echo $_SESSION['userID'];
