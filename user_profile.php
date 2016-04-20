@@ -7,10 +7,10 @@
   
   $userID=($_SESSION['userID']);
   $name=($_SESSION['name']);
-  echo <center>;
+  //echo <center>;
   echo "Hi ".$name;
   echo "Your information:";
   echo "UserID: ".$userID;
   echo "Email: ".$email;
-  echo </center>;
+  //echo </center>;
 ?>
