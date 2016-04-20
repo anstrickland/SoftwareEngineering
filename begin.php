@@ -5,18 +5,16 @@
 	include("openDB.php");
   	openDB();
   	$userID= $_SESSION['userID'];
-	//echo $userID;
+  	$name= $_SESSION['name'];
 	$query="SELECT User.name FROM User WHERE $userID=User.userID";
 	$result=mysql_query($query);
   	if ($result==0) { noerror( $result );} 
- 	//echo 'Number of Rows: ' . mysql_num_rows($result);
- 
+
   	if (noerror($result))
   	{
   	  $nobj=mysql_fetch_array($result);
   	  $name= $nobj['name'];
   	  echo "Hi" . " " . '<a href = "http://mcbitlab.com/thebookclub/user_profile.php?query='.$name.'">'.$name.'</a>';
-  	  //var_dump($result);
   	}
 ?>
 
