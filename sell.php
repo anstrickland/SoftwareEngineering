@@ -21,12 +21,19 @@
          <td> <input type="text" name="edition"> </td>
       </tr>
       <tr>
-         <td>ISBN</td>
-         <td><input type="text" name="isbn" required></td>
+         <td>ISBN (10 digit no dashes)</td>
+         <td><input type="text" name="isbn" required="required" pattern="[0-9]{9}[0-9Xx]" placeholder="xxxxxxxxxx"></td>
       </tr>
       <tr>
          <td>Book Condition</td>
-         <td> <input type="text" name="bookCondition"></td>
+         <td> <select name ="bookCondition" required="required"">
+        <option value=""></option>
+        <option value="Excellent">Excellent</option>
+        <option value="Good">Good</option>
+        <option value="Fair">Fair</option>
+        <option value="Bad">Bad</option>
+        <option value="Very Poor">Very Poor</option>
+</td>
       </tr>
       <tr>
          <td>Price</td>
