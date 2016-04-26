@@ -7,6 +7,7 @@
 	//$newId = getMaxOrderId()+1;
 	
 	$isbn = addslashes($_POST['isbn']);	//the isbn number
+	$_SESSION['isbn'] = $isbn;
 	$now = time();		//the current time
 	$orderPlaced = date("Y-m-d", $now);
 	$userID = ($_SESSION['userID']);
