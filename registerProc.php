@@ -44,7 +44,8 @@ $phoneNumber  = @$_POST[phoneNumber]; // phone number
 	
 	return $maxid;
   }	
-
+$_SESSION['userID']=$row['userID'];
+$_SESSION['name']=$row['name'];
 
      header('Location: http://mcbitlab.com/thebookclub/begin.php'); exit;
 ?>
