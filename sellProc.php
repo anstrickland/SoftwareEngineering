@@ -3,15 +3,15 @@
   include("includeMe.php");
   include("openDB.php");
   openDB();
-
-$complete="no";  
+  
+$complete="No";
 
 	$title = addslashes($_POST['title']);
 	$author = addslashes($_POST['author']);
 	$edition = addslashes($_POST['edition']);
 	$isbn = addslashes($_POST['isbn']);
 	$bookCondition= ($_POST['bookCondition']);
-
+   
 $query="INSERT INTO Product SET"
 ."      title='$title'" 
 ."      ,author='$author'"
