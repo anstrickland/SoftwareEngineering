@@ -27,8 +27,14 @@ body {
 }
 </style>
 <body>
-
-
+<?php
+	$newUser=['newUser'];
+	
+	if ($newUser = "true")
+	{
+		echo "Thanks for registering. Please Log In.";
+	}
+?>
 <div class="container">
 <div class="jumbotron">
 <h1> Welcome to Libro-to-Go </h1>
@@ -88,8 +94,6 @@ placeholder="nnn-nnn-nnnn"/> </td>
       </tr>
       <tr>
          <td> <button type="submit" class="btn btn-default">Submit</button> </td>
-        <!--  <td align="right"> Submit </td>
-         <td> <input type="submit" /> </td> -->
       </tr>
    </table>
   </div> 
