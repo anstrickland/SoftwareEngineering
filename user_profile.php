@@ -2,6 +2,7 @@
   session_start();
   include("includeMe.php");
   include("openDB.php");
+  include("header.php"); 
   openDB();
   ?>
 <html lang="en">
@@ -13,18 +14,27 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <body>
+<div class="container">
+<div class="jumbotron">
   
 <?php
   $userID=($_SESSION['userID']);
   $name=($_SESSION['name']);
   $email=($_SESSION['email']);
   echo "<center>";
-  echo "Hi ".$name."\n";
+  echo "Hi ".$name."";
+ echo "</center>";
+  echo "<br />";
   echo "Your information: \n";
+ echo "<br />";
   echo "UserID: ".$userID."\n";
+ echo "<br />";
   echo "Email: ".$email."\n";
+ echo "<br />";
   echo "These are the books you are trying to sell: \n";
- 
+ echo "<br />";   
+echo "<center>";
+echo"</div>";
 
  $q="SELECT * FROM Product 
   JOIN Sales
@@ -67,13 +77,13 @@
                         $Sold= $row['Sold'];
 		
                           echo "<tr> 
-                         <td>$name</td>
-                          <td>$title</td> 
+                        <td>$name</td>
+                        <td>$title</td> 
                          <td>$author</td>
-			 <td>$edition</td> 
+		        <td>$edition</td> 
 		        <td>$bookCondition</td> 
                         <td>$isbn</td> 
-                        <td>$Sold</td>"; 
+                        <td>$Sold"; 
 
                        echo "<a href='userProcess.php?Sold=$Sold&productID=$productID'> "
 		    ." update </a> <br />\n </td></tr>"; 	//set the new value of fulfilled 
@@ -83,6 +93,7 @@
   }
   echo "</center>";
 ?>
+
 </div>
 </body>
 </html>
