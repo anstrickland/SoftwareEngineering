@@ -47,5 +47,5 @@ $phoneNumber  = @$_POST[phoneNumber]; // phone number
 $_SESSION['userID']=$row['userID'];
 $_SESSION['name']=$row['name'];
 
-     header('Location: http://mcbitlab.com/thebookclub/begin.php'); exit;
+     header('Location: http://mcbitlab.com/thebookclub/home.html'); exit;
 ?>
