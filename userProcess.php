@@ -14,6 +14,7 @@
 			."       ;";
 		
 	$result=mysql_query($query);
-	
-	header('Location: http://mcbitlab.com/thebookclub/user_profile.php'); exit;   
+header('Location:http://mcbitlab.com/thebookclub/user_profile.php'); exit;
+ 
+
 ?>
