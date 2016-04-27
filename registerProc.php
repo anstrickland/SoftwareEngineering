@@ -6,7 +6,6 @@
 
 date_default_timezone_set("America/New_York");
    		
-      echo "This is the register process page";	
       $newId= getMaxOrderId() +1;
 	  
 $em  = @$_POST[email]; // raw email address, may have bad stuff
@@ -46,7 +45,6 @@ $phoneNumber  = @$_POST[phoneNumber]; // phone number
   }	
 $_SESSION['userID']=$row['userID'];
 $_SESSION['name']=$row['name'];
-$_SESSION['newUser']="true";
 
-     header('Location: http://mcbitlab.com/thebookclub/home.html'); exit;
+     header('Location: http://mcbitlab.com/thebookclub/begin.php'); exit;
 ?>
