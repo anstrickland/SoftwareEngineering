@@ -5,7 +5,8 @@
    openDB();
 
 date_default_timezone_set("America/New_York");
-   
+   		
+      echo "This is the register process page";	
       $newId= getMaxOrderId() +1;
 	  
 $em  = @$_POST[email]; // raw email address, may have bad stuff
