@@ -1,7 +1,7 @@
 <html>
 <style>
     input[type=button], input[type=submit], input[type=reset] {
-        background-color: #00bfff;;
+        background-color: #00bfff;
         border: none;
         color: white;
         padding: 16px 32px;
@@ -9,5 +9,16 @@
         margin: 4px 2px;
         cursor: pointer;
     }
+
+      button {
+        background-color: #00bfff;
+        border: none;
+        color: white;
+        padding: 26px 42px;
+        text-decoration: none;
+        margin: 14px 12px;
+ 
+        
+}
 </style type="text/css">
 </html>
