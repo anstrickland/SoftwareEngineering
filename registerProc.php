@@ -1,5 +1,4 @@
 <?php
-  // $bug = true;
    session_start();
    include("includeMe.php");
    include("openDB.php");
@@ -46,6 +45,7 @@ $phoneNumber  = @$_POST[phoneNumber]; // phone number
   }	
 $_SESSION['userID']=$row['userID'];
 $_SESSION['name']=$row['name'];
+$_SESSION['newUser']=$newUser['newUser'];
 
      header('Location: http://mcbitlab.com/thebookclub/home.html'); exit;
 ?>
